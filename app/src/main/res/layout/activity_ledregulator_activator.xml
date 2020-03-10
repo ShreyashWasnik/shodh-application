@@ -105,7 +105,7 @@
         android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/PowerON1"
+        android:id="@+id/LedON1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -121,7 +121,7 @@
         app:layout_constraintEnd_toStartOf="@+id/PowerOFF1" />
 
     <Button
-        android:id="@+id/PowerOFF1"
+        android:id="@+id/LedOFF1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 

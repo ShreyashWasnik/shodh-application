@@ -47,24 +47,45 @@ public class RegulatorActivity extends AppCompatActivity {
         PowerON1 = (Button)findViewById(R.id.PowerON1);
         PowerOFF1= (Button)findViewById(R.id.PowerOFF1);
 
-        msg("here1");
+
 
         new ConnectBT().execute(); //Call the class to connect
 
 
-        msg("here2");
+
 
         PowerON1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 msg("ON");
+                if (btSocket != null) {
+                    msg("Power ON");
+                    try {
+                        String str = new String();
+                        btSocket.getOutputStream().write("6".getBytes());
+
+                    } catch (IOException e) {
+                        msg("Error");
+                    }
+                }
             }
+
         });
 
         PowerOFF1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 msg("OFF");
+                if (btSocket != null) {
+                    msg("Power OFF");
+                    try {
+                        String str = new String();
+                        btSocket.getOutputStream().write("7".getBytes());
+
+                    } catch (IOException e) {
+                        msg("Error");
+                    }
+                }
             }
         });
 
@@ -74,7 +95,7 @@ public class RegulatorActivity extends AppCompatActivity {
                 msg("1");
 
                 if (btSocket != null) {
-                    msg("SOCKET ON");
+                    msg("Speed 1");
                     try {
 
                         btSocket.getOutputStream().write("2".getBytes());
@@ -93,7 +114,7 @@ public class RegulatorActivity extends AppCompatActivity {
                 msg("2");
 
                 if (btSocket != null) {
-                    msg("SOCKET ON");
+                    msg("Speed 2");
                     try {
                         String str = new String();
                         btSocket.getOutputStream().write("3".getBytes());
@@ -111,7 +132,7 @@ public class RegulatorActivity extends AppCompatActivity {
                 msg("3");
 
                 if (btSocket != null) {
-                    msg("SOCKET ON");
+                    msg("Speed 3");
                     try {
                         String str = new String();
                         btSocket.getOutputStream().write("4".getBytes());
@@ -129,7 +150,7 @@ public class RegulatorActivity extends AppCompatActivity {
                 msg("4");
 
                 if (btSocket != null) {
-                    msg("SOCKET ON");
+                    msg("Speed 4");
                     try {
                         String str = new String();
                         btSocket.getOutputStream().write("5".getBytes());

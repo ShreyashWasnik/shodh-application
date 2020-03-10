@@ -746,9 +746,13 @@ drawable tooltip_frame_light
 id ALT
 id CTRL
 id FUNCTION
+id LedOFF1
+id LedON1
 id META
 id PowerOFF1
+id PowerOFFc1
 id PowerON1
+id PowerONc1
 id SHIFT
 id SYM
 id accessibility_action_clickable_span
@@ -827,8 +831,6 @@ id button10
 id button2
 id button3
 id button4
-id button5
-id button6
 id button7
 id buttonPanel
 id button_Cooler
@@ -914,6 +916,8 @@ id progressBar
 id progressText
 id progress_circular
 id progress_horizontal
+id pumpoff
+id pumpon
 id radio
 id right
 id right_icon
@@ -944,6 +948,10 @@ id speed1
 id speed2
 id speed3
 id speed4
+id speedc1
+id speedc2
+id speedc3
+id speedc4
 id split_action_bar
 id spread
 id spread_inside

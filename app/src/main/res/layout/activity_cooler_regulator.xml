@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.132" />
 
     <Button
-        android:id="@+id/speed1"
+        android:id="@+id/speedc1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Speed:1"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.355" />
 
     <Button
-        android:id="@+id/speed2"
+        android:id="@+id/speedc2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Speed:2"
@@ -69,7 +69,7 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <Button
-        android:id="@+id/speed3"
+        android:id="@+id/speedc3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Speed:3"
@@ -82,7 +82,7 @@
         app:layout_constraintVertical_bias="0.545" />
 
     <Button
-        android:id="@+id/speed4"
+        android:id="@+id/speedc4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Speed:4"
@@ -95,9 +95,11 @@
         app:layout_constraintVertical_bias="0.635" />
 
     <Button
-        android:id="@+id/PowerON1"
+        android:id="@+id/PowerONc1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
         android:layout_marginBottom="556dp"
         android:background="@drawable/btn_bg"
         android:text="ON"
@@ -109,7 +111,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/PowerOFF1"
+        android:id="@+id/PowerOFFc1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -126,16 +128,17 @@
 
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/pumpon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="116dp"
         android:background="@drawable/btn_bg"
         android:text="ON"
         android:textColor="@color/white"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speed4"
         app:layout_constraintVertical_bias="0.502" />
@@ -143,6 +146,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp"
         android:text="Pump"
         android:textColor="@color/white"
         android:textSize="20dp"
@@ -154,16 +158,17 @@
         app:layout_constraintVertical_bias="0.225" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/pumpoff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
         android:background="@drawable/btn_bg"
         android:text="OFF"
         android:textColor="@color/white"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintHorizontal_bias="0.894"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speed4"
         app:layout_constraintVertical_bias="0.502" />
