@@ -443,6 +443,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -696,6 +697,7 @@ drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
 drawable btn_checkbox_unchecked_to_checked_mtrl_animation
+drawable btn_circle
 drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
@@ -719,6 +721,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable customprogress
 drawable et_bg
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
@@ -824,6 +827,8 @@ id button10
 id button2
 id button3
 id button4
+id button5
+id button6
 id button7
 id buttonPanel
 id button_Cooler
@@ -884,7 +889,9 @@ id line3
 id listMode
 id list_item
 id login
+id logout
 id media_actions
+id menuLogout
 id message
 id middle
 id multiply
@@ -903,6 +910,8 @@ id parentPanel
 id pass
 id password
 id percent
+id progressBar
+id progressText
 id progress_circular
 id progress_horizontal
 id radio
@@ -925,7 +934,6 @@ id search_src_text
 id search_voice_btn
 id seekBar
 id select_dialog_listview
-id send
 id shortcut
 id showCustom
 id showHome
@@ -963,6 +971,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textView
+id textView2
 id textView3
 id textView4
 id textView5
@@ -1024,6 +1033,9 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_appliance
+layout activity_cooler_regulator
+layout activity_fan_regulator
+layout activity_ledregulator_activator
 layout activity_login
 layout activity_main
 layout activity_main2
@@ -1053,7 +1065,9 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu menu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string abc_action_bar_home_description
 string abc_action_bar_up_description

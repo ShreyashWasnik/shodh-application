@@ -25,7 +25,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.myapplication.LEDRegulatorActivator" />
+        <activity android:name="com.example.myapplication.CoolerRegulatorActivity" />
+        <activity android:name="com.example.myapplication.FanRegulatorActivity" />
         <activity android:name="com.example.myapplication.ApplianceActivity" />
         <activity android:name="com.example.myapplication.LoginActivity" />
         <activity android:name="com.example.myapplication.RegulatorActivity" />

@@ -8,28 +8,30 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Main2Activity extends AppCompatActivity {
-    Button myButton;
+    Button myButton,logout;
     BluetoothAdapter bluetoothAdapter;
     //FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        //FirebaseAuth.getInstance();
+        /*FirebaseAuth.getInstance();
 
-        /*if(firebaseAuth.getCurrentUser()==null){
+        if(firebaseAuth.getCurrentUser()==null){
 
             finish();
             startActivity(new Intent(this,LoginActivity.class));
 
         }*/
 
-       //  FirebaseUser user = firebaseAuth.getCurrentUser();
+        //FirebaseUser user = firebaseAuth.getCurrentUser();
+
 
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         myButton=(Button) findViewById(R.id.button4);
@@ -38,6 +40,17 @@ public class Main2Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Main2Activity.this,SecondActivity.class);
                 startActivity(i);
+            }
+        });
+        logout=(Button) findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                Intent i = new Intent(Main2Activity.this,MainActivity.class);
+                startActivity(i);
+
             }
         });
     }

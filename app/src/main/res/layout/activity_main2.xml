@@ -9,19 +9,38 @@
 
     >
 
+
     <TextView
-        android:layout_width="157dp"
-        android:layout_height="61dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="121dp"
-        android:layout_marginLeft="121dp"
-        android:layout_marginTop="43dp"
-        android:text="Bluetooth"
+        android:layout_marginStart="131dp"
+        android:layout_marginLeft="131dp"
+        android:layout_marginTop="30dp"
+
+        android:text="RoboFever"
         android:textColor="@color/white"
-        android:textSize="30dp" />
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginBottom="17dp"
+        android:text="Logout"
+        android:textSize="15dp" />
+
+
 
     <Button
         android:id="@+id/button2"
@@ -30,8 +49,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginLeft="69dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
         android:layout_marginTop="305dp"
         android:background="@drawable/btn_bg"
         android:onClick="On"
@@ -47,9 +66,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="-49dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
+        android:layout_marginTop="-47dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
         android:background="@drawable/btn_bg"
         android:onClick="Off"
         android:text="OFF"
@@ -66,7 +85,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="83dp"
         android:layout_marginRight="83dp"
-        android:layout_marginBottom="86dp"
+        android:layout_marginBottom="294dp"
         android:background="@drawable/btn_bg"
         android:text="Paired Devices"
         android:textColor="@color/white"

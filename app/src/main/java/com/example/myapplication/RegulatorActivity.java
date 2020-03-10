@@ -60,6 +60,7 @@ public class RegulatorActivity extends AppCompatActivity {
                 msg("ON");
             }
         });
+
         PowerOFF1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

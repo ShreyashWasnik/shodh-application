@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ApplianceActivity"></activity>
+        <activity android:name=".LEDRegulatorActivator"></activity>
+        <activity android:name=".CoolerRegulatorActivity" />
+        <activity android:name=".FanRegulatorActivity" />
+        <activity android:name=".ApplianceActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegulatorActivity" />
         <activity android:name=".Regulator" />

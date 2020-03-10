@@ -41,7 +41,7 @@ public class ThirdActivity extends AppCompatActivity {
         msg(address);
 
         //call the widgtes
-        btnSend = (Button) findViewById(R.id.send);
+        //btnSend = (Button) findViewById(R.id.send);
         message = (EditText) findViewById(R.id.text);
         btnDis = (Button) findViewById(R.id.disc);
         button_Cooler = (Button)findViewById(R.id.button_Cooler);
@@ -66,7 +66,7 @@ public class ThirdActivity extends AppCompatActivity {
         button_Cooler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(ThirdActivity.this,RegulatorActivity.class);
+                Intent i = new Intent(ThirdActivity.this,CoolerRegulatorActivity.class);
                 i.putExtra("EXTRA_ADDRESS", address);
                 try {
                     btSocket.close(); //close connection
@@ -79,7 +79,7 @@ public class ThirdActivity extends AppCompatActivity {
         button_LED.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(ThirdActivity.this,RegulatorActivity.class);
+                Intent i = new Intent(ThirdActivity.this,LEDRegulatorActivator.class);
                 i.putExtra("EXTRA_ADDRESS", address);
                 try {
                     btSocket.close(); //close connection
@@ -109,7 +109,7 @@ public class ThirdActivity extends AppCompatActivity {
 
         new ConnectBT().execute(); //Call the class to connect
 
-        btnSend.setOnClickListener(new View.OnClickListener() {
+        /*btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 msg("ON");
@@ -128,7 +128,7 @@ public class ThirdActivity extends AppCompatActivity {
                     }
                 }      //method to turn on
             }
-        });
+        });*/
 
 
         btnDis.setOnClickListener(new View.OnClickListener() {
