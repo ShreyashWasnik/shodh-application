@@ -737,12 +737,15 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable robofeverbgnd
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
 id CTRL
 id FUNCTION
 id META
+id PowerOFF1
+id PowerON1
 id SHIFT
 id SYM
 id accessibility_action_clickable_span
@@ -804,6 +807,7 @@ id adjust_width
 id alertTitle
 id all
 id always
+id appliance
 id async
 id auto
 id barrier
@@ -820,7 +824,14 @@ id button10
 id button2
 id button3
 id button4
+id button7
 id buttonPanel
+id button_Cooler
+id button_Cooler1
+id button_Fan
+id button_Fan1
+id button_LED
+id button_Led1
 id cancel_action
 id center
 id center_horizontal
@@ -895,7 +906,6 @@ id percent
 id progress_circular
 id progress_horizontal
 id radio
-id reg
 id right
 id right_icon
 id right_side
@@ -913,6 +923,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id seekBar
 id select_dialog_listview
 id send
 id shortcut
@@ -936,6 +947,8 @@ id start
 id status_bar_latest_event_content
 id submenuarrow
 id submit_area
+id switch1
+id switch2
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -949,8 +962,10 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textView
 id textView3
 id textView4
+id textView5
 id time
 id title
 id titleDividerNoCustom
@@ -1008,6 +1023,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_appliance
 layout activity_login
 layout activity_main
 layout activity_main2

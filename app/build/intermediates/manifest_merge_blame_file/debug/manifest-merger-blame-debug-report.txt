@@ -33,7 +33,7 @@
 17-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\Shreyash\.gradle\caches\transforms-2\files-2.1\ac2605da77983b497481f9e2091aefdd\play-services-measurement-17.2.2\AndroidManifest.xml:26:22-107
 18
 19    <application
-19-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:9:5-29:19
+19-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:9:5-30:19
 20        android:allowBackup="true"
 20-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:10:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -47,39 +47,41 @@
 25-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:13:9-54
 26        android:supportsRtl="true"
 26-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:14:9-35
-27        android:testOnly="true"
-28        android:theme="@style/AppTheme" >
-28-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:15:9-40
+27        android:theme="@style/AppTheme" >
+27-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:15:9-40
+28        <activity android:name="com.example.myapplication.ApplianceActivity" />
+28-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:16:9-64
+28-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:16:19-52
 29        <activity android:name="com.example.myapplication.LoginActivity" />
-29-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:16:9-60
-29-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:16:19-48
+29-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:17:9-51
+29-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:17:19-48
 30        <activity android:name="com.example.myapplication.RegulatorActivity" />
-30-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:17:9-55
-30-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:17:19-52
+30-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:18:9-55
+30-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:18:19-52
 31        <activity android:name="com.example.myapplication.Regulator" />
-31-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:18:9-47
-31-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:18:19-44
+31-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:19:9-47
+31-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:19:19-44
 32        <activity android:name="com.example.myapplication.SecondActivity" />
-32-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:19:9-52
-32-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:19:19-49
+32-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:20:9-52
+32-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:20:19-49
 33        <activity android:name="com.example.myapplication.ThirdActivity" />
-33-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:20:9-51
-33-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:20:19-48
+33-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:21:9-51
+33-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:21:19-48
 34        <activity android:name="com.example.myapplication.Main2Activity" />
-34-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:21:9-51
-34-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:21:19-48
+34-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:22:9-51
+34-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:22:19-48
 35        <activity android:name="com.example.myapplication.MainActivity" >
-35-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:22:9-28:20
-35-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:22:19-47
+35-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:23:9-29:20
+35-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:23:19-47
 36            <intent-filter>
-36-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:23:13-27:29
+36-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:24:13-28:29
 37                <action android:name="android.intent.action.MAIN" />
-37-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:24:17-69
-37-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:24:25-66
+37-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:25:17-69
+37-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:25:25-66
 38
 39                <category android:name="android.intent.category.LAUNCHER" />
-39-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:26:17-77
-39-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:26:27-74
+39-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:27:17-77
+39-->D:\Android\MyApplication\app\src\main\AndroidManifest.xml:27:27-74
 40            </intent-filter>
 41        </activity>
 42        <activity

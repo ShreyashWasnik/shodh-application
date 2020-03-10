@@ -1,33 +1,23 @@
 package com.example.myapplication;
 
-import android.app.ProgressDialog;
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
-import android.os.AsyncTask;
-//import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.CompoundButton;
+import android.widget.RadioGroup;
+import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
-import java.util.UUID;
+
+import static java.lang.String.*;
 
 public class Regulator extends AppCompatActivity {
-
-    static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-    Button Speed_1, Speed_2, Speed_3,Speed_4;
-
-    String address = null;
-    BluetoothAdapter myBluetooth = null;
-    BluetoothSocket btSocket = null;
-    private ProgressDialog progress;
-    private boolean isBtConnected = false;
 
 
     @Override
@@ -35,139 +25,135 @@ public class Regulator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regulator);
 
-        //receive the address of the bluetooth device
-        Intent newint = getIntent();
-        address = newint.getStringExtra("EXTRA_ADDRESS");
-        msg(address);
+        final BluetoothSocket btSocket = null;
 
-        //call the widgtes
-        Speed_1 = (Button) findViewById(R.id.speed1);
-        Speed_2 = (Button) findViewById(R.id.speed2);
-        Speed_3 = (Button) findViewById(R.id.speed3);
-        Speed_4 = (Button) findViewById(R.id.speed4);
+        final String OnCommand = "On";
+        //final String str = "";
+        final String OffCommand = "Off";
 
-        new ConnectBT().execute(); //Call the class to connect
+        //Code for fan
+        final Switch switch1 = findViewById(R.id.switch1);
 
-        Speed_1.setOnClickListener(new View.OnClickListener() {
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                msg("ON");
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                if (btSocket != null) {
-                    msg("SOCKET ON");
-                    try {
-
-                        btSocket.getOutputStream().write("2".getBytes());
-
-                    } catch (IOException e) {
-                        msg("Error");
-                    }
-                }      //method to turn on
-            }
-        });
-
-
-        Speed_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                msg("ON");
-
-                if (btSocket != null) {
-                    msg("SOCKET ON");
-                    try {
-                        String str = new String();
-                        btSocket.getOutputStream().write("3".getBytes());
-
-                    } catch (IOException e) {
-                        msg("Error");
-                    }
-                }      //method to turn on
-            }
-        });
-
-        Speed_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                msg("ON");
-
-                if (btSocket != null) {
-                    msg("SOCKET ON");
-                    try {
-                        String str = new String();
-                        btSocket.getOutputStream().write("4".getBytes());
-
-                    } catch (IOException e) {
-                        msg("Error");
-                    }
-                }      //method to turn on
-            }
-        });
-
-        Speed_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                msg("ON");
-
-                if (btSocket != null) {
-                    msg("SOCKET ON");
-                    try {
-                        String str = new String();
-                        btSocket.getOutputStream().write("5".getBytes());
-
-                    } catch (IOException e) {
-                        msg("Error");
-                    }
-                }      //method to turn on
-            }
-        });
-
-    }
-
-
-
-    private void msg(String s) {
-        Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
-    }
-
-
-    private class ConnectBT extends AsyncTask<Void, Void, Void>  // UI thread
-    {
-        private boolean ConnectSuccess = true; //if it's here, it's almost connected
-
-
-
-
-        @Override
-        protected Void doInBackground(Void... devices) //while the progress dialog is shown, the connection is done in background
-        {
-            try {
-                if (btSocket == null || !isBtConnected) {
-                    myBluetooth = BluetoothAdapter.getDefaultAdapter();//get the mobile bluetooth device
-                    BluetoothDevice dispositivo = myBluetooth.getRemoteDevice(address);//connects to the device's address and checks if it's available
-                    btSocket = dispositivo.createInsecureRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
-                    BluetoothAdapter.getDefaultAdapter().cancelDiscovery();
-                    btSocket.connect();//start connection
+                if (isChecked) {
+                    if (btSocket != null) {
+                        String str = "";
+                        // The toggle is enabled
+                        try {
+                            btSocket.getOutputStream().write(OnCommand.getBytes());
+                            switch1.setText("ON");
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        for (byte b : OnCommand.getBytes()) {
+                            str += b;
+                        }}
+                } else {
+                    String str = "";
+                    // The toggle is disabled
+                    if (btSocket != null) {
+                        try {
+                            btSocket.getOutputStream().write(OffCommand.getBytes());
+                            switch1.setText("OFF");
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        for (byte b : OffCommand.getBytes()) {
+                            str += b;
+                        }}
                 }
-            } catch (IOException e) {
-                ConnectSuccess = false;//if the try failed, you can check the exception here
             }
-            return null;
-        }
 
-        @Override
-        protected void onPostExecute(Void result) //after the doInBackground, it checks if everything went fine
-        {
-            super.onPostExecute(result);
+        });
+        //code for fan speed
 
-            if (!ConnectSuccess) {
-                msg("Connection Failed. Is it a SPP Bluetooth? Try again.");
-                finish();
-            } else {
-                msg("Connected.");
-                isBtConnected = true;
+        SeekBar simpleSeekBar =  findViewById(R.id.seekBar);
+        // perform seek bar change listener event used for getting the progress value
+        simpleSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            int progressChangedValue = 0;
+
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                progressChangedValue = progress;
+                String fanspeed;
+                fanspeed = new String(valueOf(progressChangedValue));
+                String str = "";
+                // The toggle is enabled
+                if (btSocket != null) {
+                    try {
+                        btSocket.getOutputStream().write(fanspeed.getBytes());
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    for (byte b : fanspeed.getBytes()) {
+                        str += b;
+                    }
+                }
+
+
+
+
             }
-            progress.dismiss();
-        }
+
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                Toast.makeText(Regulator.this, "FAN speed is :" + progressChangedValue,
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        //code for pump state
+        final Switch switch2 = findViewById(R.id.switch2);
+        final String OnPCommand = "Pump On";
+        final String OffPCommand = "Pump Off";
+
+        switch2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (btSocket != null) {
+                    if (isChecked) {
+                        String str = "";
+                        // The toggle is enabled
+                        try {
+                            btSocket.getOutputStream().write(OnPCommand.getBytes());
+                            switch2.setText("ON");
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        for (byte b : OnPCommand.getBytes()) {
+                            str += b;
+                        }
+                    } else {
+                        String str = "";
+                        // The toggle is disabled
+                        try {
+                            btSocket.getOutputStream().write(OffPCommand.getBytes());
+                            switch2.setText("OFF");
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        for (byte b : OffPCommand.getBytes()) {
+                            str += b;
+                        }
+                    }}
+            }
+
+        });
+        /*Button pwrConsu = findViewById(R.id.button7);
+        pwrConsu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Regulator.this, pwrconsum.class);
+                startActivity(i);
+
+            }
+        });*/
     }
-
-}
+};

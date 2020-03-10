@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ApplianceActivity"
+    android:background="@color/background">
+
+    <Button
+        android:id="@+id/button_Fan1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="277dp"
+        android:text="Fan"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <Button
+        android:id="@+id/button_Cooler1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="322dp"
+        android:text="Cooler"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="288dp" />
+
+    <Button
+        android:id="@+id/button_Led1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="243dp"
+        android:text="LED"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="383dp" />
+
+    <TextView
+        android:id="@+id/appliance"
+        android:textColor="@color/white"
+        android:layout_width="137dp"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+
+
+        android:text="Appliances"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="154dp"
+
+        tools:layout_editor_absoluteY="59dp" />
+</RelativeLayout>

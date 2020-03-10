@@ -21,7 +21,7 @@ import java.util.UUID;
 public class ThirdActivity extends AppCompatActivity {
 
     static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-    Button btnSend, btnDis, myButton;
+    Button btnSend, btnDis, myButton,button_Fan,button_Cooler,button_LED;
     EditText message;
     String address = null;
     BluetoothAdapter myBluetooth = null;
@@ -44,9 +44,56 @@ public class ThirdActivity extends AppCompatActivity {
         btnSend = (Button) findViewById(R.id.send);
         message = (EditText) findViewById(R.id.text);
         btnDis = (Button) findViewById(R.id.disc);
-        myButton = (Button) findViewById(R.id.reg);
+        button_Cooler = (Button)findViewById(R.id.button_Cooler);
+        button_Fan = (Button)findViewById(R.id.button_Fan);
+        button_LED = (Button)findViewById(R.id.button_LED);
 
-        myButton.setOnClickListener(new View.OnClickListener() {
+
+
+        button_Fan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ThirdActivity.this,RegulatorActivity.class);
+                i.putExtra("EXTRA_ADDRESS", address);
+                try {
+                    btSocket.close(); //close connection
+                } catch (IOException e) {
+                    msg("Error");
+                }
+                startActivity(i);
+            }
+        });
+        button_Cooler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ThirdActivity.this,RegulatorActivity.class);
+                i.putExtra("EXTRA_ADDRESS", address);
+                try {
+                    btSocket.close(); //close connection
+                } catch (IOException e) {
+                    msg("Error");
+                }
+                startActivity(i);
+            }
+        });
+        button_LED.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ThirdActivity.this,RegulatorActivity.class);
+                i.putExtra("EXTRA_ADDRESS", address);
+                try {
+                    btSocket.close(); //close connection
+                } catch (IOException e) {
+                    msg("Error");
+                }
+                startActivity(i);
+            }
+        });
+
+
+
+
+      /*  myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i= new Intent(ThirdActivity.this, RegulatorActivity.class);
@@ -58,7 +105,7 @@ public class ThirdActivity extends AppCompatActivity {
                 }
                 startActivity(i);
             }
-        });
+        });*/
 
         new ConnectBT().execute(); //Call the class to connect
 

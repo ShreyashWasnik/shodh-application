@@ -20,7 +20,7 @@ public class RegulatorActivity extends AppCompatActivity {
 
 
     static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-    Button Speed_1, Speed_2, Speed_3,Speed_4;
+    Button Speed_1, Speed_2, Speed_3,Speed_4,PowerON1,PowerOFF1;
 
     String address = null;
     BluetoothAdapter myBluetooth = null;
@@ -44,6 +44,8 @@ public class RegulatorActivity extends AppCompatActivity {
         Speed_2 = (Button) findViewById(R.id.speed2);
         Speed_3 = (Button) findViewById(R.id.speed3);
         Speed_4 = (Button) findViewById(R.id.speed4);
+        PowerON1 = (Button)findViewById(R.id.PowerON1);
+        PowerOFF1= (Button)findViewById(R.id.PowerOFF1);
 
         msg("here1");
 
@@ -51,6 +53,19 @@ public class RegulatorActivity extends AppCompatActivity {
 
 
         msg("here2");
+
+        PowerON1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                msg("ON");
+            }
+        });
+        PowerOFF1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                msg("OFF");
+            }
+        });
 
         Speed_1.setOnClickListener(new View.OnClickListener() {
             @Override
