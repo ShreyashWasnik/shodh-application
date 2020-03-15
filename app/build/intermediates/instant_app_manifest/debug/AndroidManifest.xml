@@ -34,7 +34,9 @@
         <activity android:name="com.example.myapplication.LoginActivity" />
         <activity android:name="com.example.myapplication.RegulatorActivity" />
         <activity android:name="com.example.myapplication.Regulator" />
-        <activity android:name="com.example.myapplication.SecondActivity" />
+        <activity
+            android:name="com.example.myapplication.SecondActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
         <activity android:name="com.example.myapplication.ThirdActivity" />
         <activity android:name="com.example.myapplication.Main2Activity" />
         <activity android:name="com.example.myapplication.MainActivity" >

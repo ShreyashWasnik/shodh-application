@@ -20,7 +20,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegulatorActivity" />
         <activity android:name=".Regulator" />
-        <activity android:name=".SecondActivity" />
+        <activity android:name=".SecondActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
         <activity android:name=".ThirdActivity" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity">
